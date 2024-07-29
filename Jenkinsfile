@@ -16,10 +16,9 @@ node('node') {
          env.NODE_ENV = "test"
 
          print "Environment will be : ${env.NODE_ENV}"
-
+         sh 'npm install'
          sh 'node -v'
          sh 'npm prune'
-         sh 'npm install'
          sh 'npm test'
 
        }
